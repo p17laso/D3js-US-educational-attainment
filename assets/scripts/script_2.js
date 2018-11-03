@@ -87,7 +87,7 @@ d3.json("assets/data/us.json", function(data) {
             .datum(d.parent)
             .select("rect")
             .attr("fill", function () {
-                return '#f7af72'
+                return '#001a00'
             });
         var g1 = svg.insert("g", ".grandparent")
             .datum(d)
