@@ -16,14 +16,21 @@
   <header>
        <nav>
     <ul>
-      <li><a href="#top" onhover="bleep.play()">Top</a></li>
-      <li><a href="#national" onhover="bleep.play()">National</a></li>
-      <li><a href="#regional" onhover="bleep.play()">Regional</a></li>
-      <li><a href="#state" onhover="bleep.play()">State-Level</a></li>
+      <li><a href="#top" onmouseover="bleep.play()">Top</a></li>
+      <li><a href="#national" onmouseover="bleep.play()">National</a></li>
+      <li><a href="#regional" onmouseover="bleep.play()">Regional</a></li>
+      <li><a href="#state" onmouseover="bleep.play()">State-Level</a></li>
     <ul>
         </nav>
     </header>
 <body>
+  <audio controls>
+ 
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="horse.mp3" type="audio/mpeg">
+  <div id="sounddiv"><bgsound id="sound"></div>
+  
+ </audio>
     <h1 class="title">Educational Attainment in the United States</h1>
         
 	
