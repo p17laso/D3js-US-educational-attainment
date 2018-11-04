@@ -69,7 +69,41 @@ nav ul li a {
   text-decoration: none; 
   color: #a9abae;
 }
+	@media screen and (max-width: 768px) {
+		#menu {
+			width:100%;
+			display: block;
+			background:#292f36;
+			font-size:1.35em;
+			text-align: center;
+			color:#fff;
+			
+		}
+		#nav.js {
+			display: none;
 
+		}
+		nav ul {
+			width:100%;
+			list-style:none;
+			background:#292f36;
+			position: fixed;
+	
+		}
+		nav ul li {
+			width:100%;
+			text-align: center;
+			color:#070a0f;
+
+		}
+		
+	}
+
+	@media screen and (min-width: 768px) {
+		#menu {
+			display: none;
+		}
+	}
 body {
     font-size: 14px;
     font-family: "Muli", "Gill Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -91,16 +125,19 @@ label{
 
 .radio-toolbar label {
 
-  display: inline-block;
-  background-color: #ddd;
-  padding: 4px 11px;
-  font-family: "Muli";
-  font-size: 16px;
+  display: block;
+  background-color: #20906b;
+  padding: 7px 12px;  
+  border: 2px solid red;
+  border-style:dotted;
+  font-family: "Arial";
+  font-size: 15px;
   cursor: pointer;
 }
 
 .radio-toolbar input[type="radio"]:checked+label {
   background-color: #bbb;
+  background-color: #7e2090;
 }
 
 
@@ -254,8 +291,8 @@ form {
     #chart {
 	  max-width: 100%;
 	  overflow:auto;
-    margin: 50px;
-        margin-top: 20px;
+      margin: 50px;
+      margin-top: 20px;
 	}
 	text {
 	  pointer-events: none;
