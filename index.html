@@ -7,56 +7,71 @@
     <link href="assets/stylesheets/style.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script type="text/javascript" src="assets/sound/sound-mouseover.js"></script>
+    <script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
   <header>
        <nav>
-    <ul>
-      <li><a href="#top" >Top</a></li>
-      <li><a href="#national">National</a></li>
-      <li><a href="#regional">Regional</a></li>
-      <li><a href="#state">State-Level</a></li>
+    <ul id="nav">
+      <li><a href="#top" onmouseover="playclip();" >Top</a></li>
+      <li><a href="#national" onmouseover="playclip();">National</a></li>
+      <li><a href="#regional" onmouseover="playclip();">Regional</a></li>
+      <li><a href="#state" onmouseover="playclip();">State-Level</a></li>
     <ul>
         </nav>
     </header>
 <body>
-    <h1 class="title">Educational Attainment in the United States</h1>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript">
+	$("#nav").addClass("js").before('<div id="menu">&#9776;</div>');
+	$("#menu").click(function(){
+		$("#nav").toggle();
+	});
+	$(window).resize(function(){
+		if(window.innerWidth > 768) {
+			$("#nav").removeAttr("style");
+		}
+	});
+</script>
+    <h1 class="title" onmouseover=responsiveVoice.speak($(this).text()) onmouseleave=responsiveVoice.cancel(); >Educational Attainment in the United States</h1>
         
 	
 	<p><br></p>
-    <h2 class="subtitle">Nation-Wide Education Level of Population in Schooling</h2>
+    <h2 class="subtitle" onmouseover=responsiveVoice.speak($(this).text()); onmouseleave=responsiveVoice.cancel();>Nation-Wide Education Level of Population in Schooling</h2>
 	
-    <svg id="pie-chart" width="960" height="450"></svg><a name="regional"></a>
+    <svg id="pie-chart" width="960" height="450" onmouseover=responsiveVoice.speak($(this).text()); onmouseleave=responsiveVoice.cancel();></svg><a name="regional"></a>
     <p><br><br><br></p>
-    <h2 class="subtitle">Educational Attainment: Region-level Breakdown of University Students</h2>
+     <h2 class="subtitle" onmouseover=responsiveVoice.speak($(this).text()); onmouseleave=responsiveVoice.cancel();>Educational Attainment: Region-level Breakdown of University Students</h2>
 	
     <form id="tree-form">
         <div class="radio-toolbar">
             <input type="radio" id="mode1" name="treeSum" value="number" checked>
-            <label for="mode1">Pursuing a Masters degree (in # of students)</label>
+            <label for="mode1" onmouseover=responsiveVoice.speak($(this).text()); onmouseleave=responsiveVoice.cancel();>Pursuing a Masters degree (in # of students)</label>
             <input type="radio" id="mode2" name="treeSum" value="percent">
-            <label for="mode2">Pursuing a Masters degree (in %)</label>
+            <label for="mode2" onmouseover=responsiveVoice.speak($(this).text()); onmouseleave=responsiveVoice.cancel();>Pursuing a Masters degree (in %)</label>
             <input type="radio" id="mode3" name="treeSum" value="male">
-            <label for="mode3">Males in College (18-24yrs)(in %)</label>
+            <label for="mode3" onmouseover=responsiveVoice.speak($(this).text()); onmouseleave=responsiveVoice.cancel();>Males in College (18-24yrs)(in %)</label>
             <input type="radio" id="mode4" name="treeSum" value="femal">
-            <label for="mode4">Females in College (18-24yrs) (in %)</label>
+            <label for="mode4" onmouseover=responsiveVoice.speak($(this).text()); onmouseleave=responsiveVoice.cancel();>Females in College (18-24yrs) (in %)</label>
         </div>
     </form>
 	<p></p>
-    <div id="chart"></div>
+    <div id="chart" onmouseover=responsiveVoice.speak($(this).text()); onmouseleave=responsiveVoice.cancel();></div>
 	<a name="state"></a>
     <p><br><br></p>
-    <h2 class="subtitle">Education Level of Population in Schooling: State-level Breakdown</h2>
+   <h2 class="subtitle" onmouseover=responsiveVoice.speak($(this).text()); onmouseleave=responsiveVoice.cancel();>Education Level of Population in Schooling: State-level Breakdown</h2>
 	
     <form id="stack-form">
         <div class="radio-toolbar">
             <input type="radio" id="radio1" name="mode" value="bypercent" checked>
-            <label for="radio1">Students (in %)</label>
+            <label for="radio1" onmouseover=responsiveVoice.speak($(this).text()); onmouseleave=responsiveVoice.cancel();>Students (in %)</label>
             <input type="radio" id="radio2" name="mode" value="bycount">
-            <label for="radio2">Students (in number of people)</label>
+            <label for="radio2" onmouseover=responsiveVoice.speak($(this).text()); onmouseleave=responsiveVoice.cancel();>Students (in number of people)</label>
     </div>
     </form>
     <div>
-        <svg id="stacked-bar-chart"></svg>
+        <svg id="stacked-bar-chart" onmouseover=responsiveVoice.speak($(this).text()); onmouseleave=responsiveVoice.cancel();></svg>
     </div>
 
     
@@ -81,6 +96,12 @@
    Should be equal the the height of the header
  */
 </script>
-
+<audio>
+<source src="assets/sound/click.mp3"></source>
+<source src="assets/sound/click.ogg"></source>
+</audio>
+<div id="sounddiv"><bgsound id="sound"></div>
+<script>
+</script>
 </body>
 </html>
