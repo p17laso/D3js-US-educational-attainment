@@ -7,29 +7,20 @@
     <link href="assets/stylesheets/style.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-        <script>
-		var bleep = new Audio();
-		bleep.src = "zapsplat_hover_sound.mp3";
-		
-	</script>
+    <script type="text/javascript" src="sound-mouseover.js"></script>
 </head>
   <header>
        <nav>
     <ul>
-      <li><a href="#top" onmouseover="bleep.play()">Top</a></li>
-      <li><a href="#national" onmouseover="bleep.play()">National</a></li>
-      <li><a href="#regional" onmouseover="bleep.play()">Regional</a></li>
-      <li><a href="#state" onmouseover="bleep.play()">State-Level</a></li>
+      <li><a href="#top" onmouseover="playclip()">Top</a></li>
+      <li><a href="#national" onmouseover="playclip()">National</a></li>
+      <li><a href="#regional" onmouseover="playclip()">Regional</a></li>
+      <li><a href="#state" onmouseover="playclip()">State-Level</a></li>
+	    
     <ul>
         </nav>
     </header>
 <body>
-  <audio controls>
- 
-  <source src="zapsplat_hover_sound.ogg" type="audio/ogg">
-  <source src="zapsplat_hover_sound.mp3" type="audio/mpeg">
-   </audio>
- <div id="sounddiv"><bgsound id="sound"></div>
     <h1 class="title">Educational Attainment in the United States</h1>
         
 	
@@ -92,6 +83,11 @@
    Should be equal the the height of the header
  */
 </script>
+  <audio controls>
+	  <source src="zapsplat_hover_sound.mp3" type="audio/mpeg"></source>
+	 <source src="zapsplat_hover_sound.ogg" type="audio/ogg"></source>
+  </audio>
+  <div id="sounddiv"><bgsound id="sound"></div>
 
 </body>
 </html>
