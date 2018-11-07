@@ -69,7 +69,32 @@ nav ul li a {
   text-decoration: none; 
   color: #a9abae;
 }
+@media screen and (max-width: 768px) {
+		#menu {
+			width:1.4em;
+			display: block;
+			background:#ddd;
+			font-size:1.35em;
+			text-align: center;
+		}
+		#nav.js {
+			display: none;
+		}
+		ul {
+			width:100%;
+			list-style:none;
+		}
+		li {
+			width:100%;
+			border-right:none;
+		}
+	}
 
+	@media screen and (min-width: 768px) {
+		#menu {
+			display: none;
+		}
+	}
 body {
     font-size: 14px;
     font-family: "Muli", "Gill Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
