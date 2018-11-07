@@ -19,26 +19,17 @@
     <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
 </head>
   <header>
-       <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
-	<div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-	  <span class="navbar-toggler-icon"></span>	
-	 </button>
-         <div class="collapse navbar-collapse" id="navbarResponsive">	
-	 							    
-	 </div>
-								    
-      <ul class="navbar-nav ml-auto">
-      <li class="nav-item active"><a class = "nav-link" href="#top" onmouseover="playclip()">Top</a></li>
-      <li class="nav-item active"><a class = "nav-link" href="#national" onmouseover="playclip()">National</a></li>
-      <li class="nav-item active"><a class = "nav-link" href="#regional" onmouseover="playclip()">Regional</a></li>
-      <li class="nav-item active"><a class = "nav-link" href="#state" onmouseover="playclip()">State-Level</a></li>
-	    
-    </ul>
-						   
-        </div>
-        </nav>
-    </header>
+       <header>
+       <nav>
+     <ul>
+       <li><a href="#top" onmouseover="playclip()">Top</a></li>
+       <li><a href="#national" onmouseover="playclip()">National</a></li>
+       <li><a href="#regional" onmouseover="playclip()">Regional</a></li>
+       <li><a href="#state" onmouseover="playclip()">State-Level</a></li>
+ 	    
+     </ul>
+         </nav>
+     </header>
 <body>
     <h1 class="title" onmouseover="responsiveVoice.speak('Educational Attainment in the United States','US English Female');" onmouseleave="responciveVoice.cancel();">Educational Attainment in the United States</h1>
         
@@ -46,11 +37,11 @@
 	<p><br></p>
      <h2 class="subtitle" onmouseover="responsiveVoice.speak('Nation-Wide Education Level of Population in Schooling','US English Female');" onmouseleave="responciveVoice.cancel();">Nation-Wide Education Level of Population in Schooling</h2>
 	
-    <svg id="pie-chart" width="960" height="450" class="svg-fluid"></svg><a name="regional"></a>
+    <svg id="pie-chart" width="960" height="450"></svg><a name="regional"></a>
     <p><br><br><br></p>l
     <h2 class="subtitle" onmouseover="responsiveVoice.speak('Educational Attainment: Region-level Breakdown of University Students','US English Female');" onmouseleave="responsiveVoice.cancel();">Educational Attainment: Region-level Breakdown of University Students</h2>
 	
-    <form id="tree-form" class="form-fluid">
+    <form id="tree-form">
         <div class="radio-toolbar">
             <input type="radio" id="mode1" name="treeSum" value="number" checked>
              <label for="mode1" onmouseover="responsiveVoice.speak('Pursuing a Masters degree (in number of students)','US English Female');" onmouseleave="responsiveVoice.cancel();">Pursuing a Masters degree (in # of students)</label>
@@ -68,7 +59,7 @@
     <p><br><br></p>
     <h2 class="subtitle" onmouseover="responsiveVoice.speak('Education Level of Population in Schooling: State-level Breakdown','US English Female');" onmouseleave="responsiveVoice.cancel();">Education Level of Population in Schooling: State-level Breakdown</h2>
 	
-    <form id="stack-form" class="form-fluid">
+    <form id="stack-form">
         <div class="radio-toolbar">
             <input type="radio" id="radio1" name="mode" value="bypercent" checked>
             <label for="radio1" onmouseover="responsiveVoice.speak('Students (in percentage)','US English Female');" onmouseleave="responsiveVoice.cancel();">Students (in %)</label>
@@ -76,8 +67,8 @@
             <label for="radio2" onmouseover="responsiveVoice.speak('Students (in number of people)','US English Female');" onmouseleave="responsiveVoice.cancel();">Students (in number of people)</label>
     </div>
     </form>
+        <svg id="stacked-bar-chart"></svg>
     <div>
-        <svg id="stacked-bar-chart" class="svg-fluid"></svg>
     </div>
 
     
