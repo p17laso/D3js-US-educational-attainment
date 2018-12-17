@@ -35,7 +35,7 @@
       <li class="nav-item active"><a class="nav-link" href="#top"onmouseover="playclip();" >Top</a></li>
       <li class="nav-item active"><a class="nav-link" href="#national"onmouseover="playclip();">National</a></li>
       <li class="nav-item active"><a class="nav-link" href="#regional"onmouseover="playclip();">Regional</a></li>
-      <li class="nav-item active"><a class="nav-link" href="state"onmouseover="playclip();">State-Level</a></li>
+      <li class="nav-item active"><a class="nav-link" href="#state"onmouseover="playclip();">State-Level</a></li>
       <li><a onclick="showhide('nationwide');" >National</a></li>
       <li><a onclick="showhide('regionlevel');" >Regional</a></li>
       <li><a onclick="showhide('statelevel');" >State-Level</a></li>
@@ -48,15 +48,20 @@
 						    
      <h1 class="title" onmouseover="responsiveVoice.speak('Educational Attainment in the United States','US English Female');" onmouseleave="responsiveVoice.cancel();">Educational Attainment in the United States</h1>
         
-	
+     <div class="hide" id="nationwide">
+	     
 	<p><br></p>
      <h2 class="subtitle" onmouseover="responsiveVoice.speak('Nation-Wide Education Level of Population in Schooling','US English Female');" onmouseleave="responciveVoice.cancel();">Nation-Wide Education Level of Population in Schooling</h2>
 	
      <svg id="pie-chart" width="960" height="450" onmouseover=responsiveVoice.speak($(this).text()); onmouseleave=responsiveVoice.cancel();></svg><a name="regional"></a>
     <p><br><br><br></p>l
+	</div>     
+	  
+       <div class="hide" id="regionlevel">
+	       
     <h2 class="subtitle" onmouseover="responsiveVoice.speak('Educational Attainment: Region-level Breakdown of University Students','US English Female');" onmouseleave="responsiveVoice.cancel();">Educational Attainment: Region-level Breakdown of University Students</h2>
 	
-    <form id="tree-form">
+	<form id="tree-form">
         <div class="radio-toolbar">
             <input type="radio" id="mode1" name="treeSum" value="number" checked>
              <label for="mode1" onmouseover="responsiveVoice.speak('Pursuing a Masters degree (in number of students)','US English Female');" onmouseleave="responsiveVoice.cancel();">Pursuing a Masters degree (in # of students)</label>
