@@ -110,6 +110,27 @@
    Should be equal the the height of the header
  */
 </script>
+	
+<script>
+	
+	function showhide(id) {
+    var divid = document.getElementById(id);
+    var divs = document.getElementsByClassName('hide');
+    var showElement = true;
+    if (divid.style.display === 'block') {
+        showElement = false;
+    }
+    for (var i = 0; i < divs.length; i++) {
+        divs[i].style.display = 'none';
+    }
+    if (showElement) {
+        divid.style.display = 'block';
+    }
+    return false;
+}
+	
+	</script>
+	
   <audio>
 	  <source src="zapsplat_hover_sound.mp3" type="audio/mpeg"></source>
 	 <source src="zapsplat_hover_sound.ogg" type="audio/ogg"></source>
