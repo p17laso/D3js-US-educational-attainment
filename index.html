@@ -36,9 +36,6 @@
       <li class="nav-item active"><a class="nav-link" href="#national"onmouseover="playclip();">National</a></li>
       <li class="nav-item active"><a class="nav-link" href="#regional"onmouseover="playclip();">Regional</a></li>
       <li class="nav-item active"><a class="nav-link" href="#state"onmouseover="playclip();">State-Level</a></li>
-      <li onclick="showThis('nationwide');" ><a href="#national">National</a></li>
-      <li onclick="showThis('regionlevel');" >Regional</a></li>
-      <li onclick="showThis('statelevel');" >State-Level</a></li>
     <ul>
    </div>
    </div>
@@ -47,19 +44,13 @@
 <body>
 						    
      <h1 class="title" onmouseover="responsiveVoice.speak('Educational Attainment in the United States','US English Female');" onmouseleave="responsiveVoice.cancel();">Educational Attainment in the United States</h1>
-        
-    <a name="national"></a>
-    <div id="nationwide" class="hidden">
 	     
 	<p><br></p>
      <h2 class="subtitle" onmouseover="responsiveVoice.speak('Nation-Wide Education Level of Population in Schooling','US English Female');" onmouseleave="responciveVoice.cancel();">Nation-Wide Education Level of Population in Schooling</h2>
 	
      <svg id="pie-chart" width="960" height="450" onmouseover=responsiveVoice.speak($(this).text()); onmouseleave=responsiveVoice.cancel();></svg><a name="regional"></a>
     <p><br><br><br></p>l
-	</div>     
-	  
-      <a name="regional"></a>
-    <div id="regionlevel" class="hidden">
+	
 	       
     <h2 class="subtitle" onmouseover="responsiveVoice.speak('Educational Attainment: Region-level Breakdown of University Students','US English Female');" onmouseleave="responsiveVoice.cancel();">Educational Attainment: Region-level Breakdown of University Students</h2>
 	
@@ -77,10 +68,9 @@
     </form>
 	<p></p>
      <div id="chart" onmouseover=responsiveVoice.speak($(this).text()); onmouseleave=responsiveVoice.cancel();></div>
-	    </div>
 	
 	<a name="state"></a>
-	<div id="statelevel" class="hidden">
+
     <p><br><br></p>
     <h2 class="subtitle" onmouseover="responsiveVoice.speak('Education Level of Population in Schooling: State-level Breakdown','US English Female');" onmouseleave="responsiveVoice.cancel();">Education Level of Population in Schooling: State-level Breakdown</h2>
 	
@@ -96,8 +86,7 @@
     <div>
     <svg id="stacked-bar-chart" onmouseover=responsiveVoice.speak($(this).text()); onmouseleave=responsiveVoice.cancel();></svg>
     </div>
-		
- </div>
+
 
     
 <script src="https://d3js.org/d3.v4.min.js"></script>
@@ -124,21 +113,7 @@
  */
 </script>
 	
-<script>
-	
-	function showThis(id) {
-    if (document.getElementById) {
-	var thisId = document.getElementById(id);
-	var blocks = document.getElementsByClassName("hidden");
-	for(var i=0; i<blocks.length; i++) {
-            blocks[i].style.display = "none";
-	}
-	thisId.style.display = "block";
-    } 
-}
-	
-	</script>
-	
+
   <audio>
 	  <source src="zapsplat_hover_sound.mp3" type="audio/mpeg"></source>
 	 <source src="zapsplat_hover_sound.ogg" type="audio/ogg"></source>
