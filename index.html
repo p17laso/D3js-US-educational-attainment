@@ -126,20 +126,15 @@
 	
 <script>
 	
-	function showhide(id) {
-    var divid = document.getElementById(id);
-    var divs = document.getElementsByClassName('hide');
-    var showElement = true;
-    if (divid.style.display === 'block') {
-        showElement = false;
-    }
-    for (var i = 0; i < divs.length; i++) {
-        divs[i].style.display = 'none';
-    }
-    if (showElement) {
-        divid.style.display = 'block';
-    }
-    return false;
+	function showThis(id) {
+    if (document.getElementById) {
+	var thisId = document.getElementById(id);
+	var blocks = document.getElementsByClassName("hidden");
+	for(var i=0; i<blocks.length; i++) {
+            blocks[i].style.display = "none";
+	}
+	thisId.style.display = "block";
+    } 
 }
 	
 	</script>
