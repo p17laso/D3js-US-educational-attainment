@@ -33,9 +33,9 @@
    <div class="collapse navbar-collapse" id="navbarResponsive">
      <ul class="navbar-nav navbar-right">
       <li class="nav-item active"><a class="nav-link" href="#top"onmouseover="playclip();">Top</a></li>
-      <li class="nav-item active"><a class="nav-link" href="#national"onmouseover="playclip();" onclick="script_1()" >National</a></li>
-      <li class="nav-item active"><a class="nav-link" href="#regional"onmouseover="playclip();" onclick="script_2()" >Regional</a></li>
-      <li class="nav-item active"><a class="nav-link" href="#state"onmouseover="playclip();" onclick="script_3()" >State-Level</a></li>
+      <li class="nav-item active"><a class="nav-link" href="#national"onmouseover="playclip();" onclick="firstscript()" >National</a></li>
+      <li class="nav-item active"><a class="nav-link" href="#regional"onmouseover="playclip();" onclick="secondscript()" >Regional</a></li>
+      <li class="nav-item active"><a class="nav-link" href="#state"onmouseover="playclip();" onclick="thirdscript()" >State-Level</a></li>
     <ul>
    </div>
    </div>
@@ -89,7 +89,7 @@
     </div>
 	
 <script>
-	function script_1() {
+	function firstscript() {
 	document.getElementById("tittleregion").style.display = "none";
 	document.getElementById("tittlestate").style.display = "none";
 	document.getElementById("tittlenation").style.display = "block";
@@ -101,7 +101,7 @@
 	
 	
 }
-	function script_2() {
+	function secondscript() {
 	document.getElementById("tittleregion").style.display = "block";
 	document.getElementById("tittlestate").style.display = "none";
 	document.getElementById("tittlenation").style.display = "none";
@@ -113,7 +113,7 @@
 	
 	
 }
-	function script_3() {
+	function thirdscript() {
 	document.getElementById("tittleregion").style.display = "none";
 	document.getElementById("tittlestate").style.display = "block";
 	document.getElementById("tittlenation").style.display = "none";
