@@ -354,11 +354,11 @@ rect.disabled {
 
 /* chart */
 #chart {
-  height: 800px;
+  height: 450px;
   margin: 0 auto;
   position: relative;
   display: block;
-  width: 1200px;
+  width: 960px;
 }
 
 /* tooltip */
